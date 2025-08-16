@@ -10,7 +10,7 @@ const infoBtn = document.querySelector(".info-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
 
 function calcBMI(weight, height) {
-  if (weight === "" || height === "") {
+  if (weight === "" || height === "" || weight < 0 || height < 0) {
     return "Invalid info!";
   }
 
