@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Container Area -->
+    <div class="container">
+      <h1 class="title">BMI Calculator</h1>
+
+      <!-- Form Area -->
+      <form action="" id="form">
+        <label for="weight">Weight</label>
+        <input type="number" name="weight" id="weight" placeholder="In KG" />
+        <label for="height">Height</label>
+        <input type="number" name="height" id="height" placeholder="In CM" />
+        <button type="submit" id="btn">Calculate</button>
+      </form>
+
+      <!-- Result Area -->
+      <div class="result-info">
+        <h3>Your BMI</h3>
+        <h2 id="score"></h2>
+
+        <!-- Information Button -->
+        <button type="button" aria-label="BMI Information" class="info-btn">
+          <img src="./info-circle.png" alt="" />
+        </button>
+      </div>
+
+      <!-- BMI Info Area -->
+      <div class="bmi-info">
+        <h3>BMI Categories:</h3>
+        <!-- List -->
+        <ul class="categories">
+          <li>Underweight: Below 18.5 kg/m²</li>
+          <li>Healthy Weight: 18.5 to 24.9 kg/m²</li>
+          <li>Overweight: 25.0 to 29.9 kg/m²</li>
+          <li>Obese: 30 kg/m² or higher</li>
+        </ul>
+
+        <!-- Cross Button -->
+        <button type="button" aria-label="Cancel Button" class="cancel-btn">
+          <img src="./x-mark.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+  </body>
+</html>
