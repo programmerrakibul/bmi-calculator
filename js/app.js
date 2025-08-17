@@ -9,7 +9,8 @@ const bmiInfoContainer = document.querySelector(".bmi-info");
 const infoBtn = document.querySelector(".info-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
 
-function calcBMI(weight, height) {
+// Function for Calculating BMI
+function calculateBMI(weight, height) {
   if (weight === "" || height === "" || weight <= 0 || height <= 0) {
     return "Invalid info!";
   }
@@ -21,6 +22,7 @@ function calcBMI(weight, height) {
   return result;
 }
 
+// Function for adding different background color based on BMI value
 function bgColors(result) {
   const styleContainer = resultContainer.style;
   const colors = {
@@ -30,6 +32,7 @@ function bgColors(result) {
     red: "rgba(231, 76, 60, 1)",
   };
 
+  // if-else statement for choosing bg colors
   if (result >= 30) {
     styleContainer.backgroundColor = colors["darkRed"];
   } else if (result >= 25) {
@@ -41,14 +44,16 @@ function bgColors(result) {
   }
 }
 
-button.addEventListener("click", () => {
+function calcBMIBtn() {
   const newWeight = weight.value;
   const newHeight = height.value;
-  const bmi = calcBMI(newWeight, newHeight);
+  const bmi = calculateBMI(newWeight, newHeight);
   score.textContent = bmi;
   bgColors(score.textContent);
   resultContainer.style.display = "block";
-});
+}
+
+button.addEventListener("click", calcBMIBtn);
 
 infoBtn.addEventListener("click", () => {
   bmiInfoContainer.style.display = "block";
