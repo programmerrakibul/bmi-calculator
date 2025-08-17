@@ -15,7 +15,7 @@ function calcBMI(weight, height) {
   }
 
   weight = parseFloat(weight);
-  height = parseFloat(height) / 100;
+  height = parseFloat(height) * 0.3048;
   let result = weight / Math.pow(height, 2);
   result = result.toFixed(1);
   return result;
